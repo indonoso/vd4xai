@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -17,21 +17,67 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
-title: VD4XAI 
+title: VD4XAI
+subtitle: A framework to develop visualizations for XAI
 email: ivania.donoso@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  VD4XAI is a framework to create XAI visualizations.
+description: VD4XAI, a framework to develop visualizations for XAI
 
-twitter_username: indonoso_
 github_username:  indonoso
+include:
+  - .htaccess
+  - _pages
 
 # Build settings
-theme: jekyll-theme-minimal
 plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already ha
-  - jekyll-feed
+  - jekyll-include-cache
+
+collections:
+  use_cases:
+    output: true
+    permalink: /:collection/:path/
+
+# theme
+breadcrumbs: true
+minimal_mistakes_skin: "contrast"
+
+
+defaults:
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+      share: false
+      sidebar:
+        nav: "default"
+
+  # _use_cases
+  - scope:
+      path: ""
+      type: use_cases
+    values:
+      layout: single
+      author_profile: false
+      share: false
+      sidebar:
+        nav: "default"
+
+twitter:
+  username: "indonoso_"
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/indonoso_"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/indonoso"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
