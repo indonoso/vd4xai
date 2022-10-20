@@ -1,0 +1,15 @@
+default:
+  - title: Framework
+    url: /framework/
+  - title: "Use cases"
+    children:
+      - title: "Text classification"
+        url: /use_cases/lime/
+      - title: "Image classification"
+        url: /use_cases/saliency/
+      - title: "Recommendation system"
+        url: /use_cases/recsys/
+  - title: "About"
+    url: /about/
+  - title: "Resources"
+    url: /resources/

@@ -1,0 +1,36 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+
+$ds:#FCCC9F;
+$dta: #F0E6A9;
+$veii:#B6D7A8;
+$al: #D5A6BD;
+$sans-serif : "Open sans", sans-serif;
+$global-font-family : $sans-serif;
+
+
+
+.ds{
+  background-color: $ds;
+}
+
+.dta{
+  background-color: $dta;
+}
+.veii{
+  background-color: $veii;
+}
+.al{
+  background-color: $al;
+}
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+.project{
+  font-family: $monospace;
+}
