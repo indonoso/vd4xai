@@ -2,10 +2,8 @@
 title: Image Classification and Explanations with Saliency Maps
 ---
 
-![Saliency](/assets/images/saliency.png)
-
-//The image used in the visualization was taken
-from the [ChestX-ray8 dataset](https://doi.org/10.48550/arXiv.1705.02315).
+{% include figure image_path="/assets/images/saliency.jpg" alt="First LIME redesign" caption="The image used in the visualization was taken
+from the [ChestX-ray8 dataset](https://doi.org/10.48550/arXiv.1705.02315)." id="saliency" %}
 
 
 ## Domain situation
@@ -14,6 +12,7 @@ A radiologist is using a new system powered by an AI model. This system was desi
 ## XAI task & explanation abstraction
 
 1. Data type: Image
+
 2. AI model: A [Convolution Neural Network](https://ieeexplore.ieee.org/document/726791) in which input is an image, and the output is the class score. This CNN model was trained on the [ChestX-ray8 dataset](https://doi.org/10.48550/arXiv.1705.02315).
 
 3. XAI task: Understand why the given AI/ML model gives its prediction.

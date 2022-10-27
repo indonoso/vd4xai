@@ -2,7 +2,7 @@
 title: Text Classification with LIME
 ---
 
-![Current lime](/assets/images/lime_orginal.jpg)
+{% include figure image_path="/assets/images/lime_orginal.jpg" alt="Current LIME visualization" caption="Current LIME visualization" id="fig_lime_vis" %}
 
 ## Domain situation
 A restaurant wants to understand whether the reviews it is getting from its clients are positive or negative. The number of reviews they receive daily is very high, so they decided to get help from an AI to classify these opinions.
@@ -73,7 +73,7 @@ those words see their cognitive load increased by requiring them to
 intersperse their attention between one chart and the other.
 
 
-![redesign_1](/assets/images/lime_redesign_1.jpg)
+{% include figure image_path="/assets/images/lime_redesign_1.jpg" alt="First LIME redesign" caption="New desgin to reduce cogntive load" id="fig_redesign_1" %}
 
 We can redesign this visualization with `VD4XAI`. If we want to allow
 both visual tasks to be performed simultaneously without increasing
@@ -100,7 +100,7 @@ very long text. To avoid this problem, we propose the end-user selects
 the words she wishes to compare. Applying the framework will again be
 necessary to iterate the decisions within the visual encoding level.
 
-![redesign_2](/assets/images/lime_redesign_2.jpg)
+{% include figure image_path="/assets/images/lime_redesign_2.jpg" alt="Second LIME redesign" caption="New desgin that adds interaction" id="fig_redesign_2" %}
 
 In this case, we can propose building an interactive chart where the
 user can select the words in the text, and only those words appear in
@@ -126,4 +126,4 @@ only have bars for one side. (iii) The text chart should use a
 sequential color scale. In short, only keep the information associated
 with the most probable class.
 
-![redesign_3](/assets/images/lime_redesign_3.jpg)
+{% include figure image_path="/assets/images/lime_redesign_3.jpg" alt="Third LIME redesign" caption="Reducing XAI tasks" id="fig_redesign_3" %}
