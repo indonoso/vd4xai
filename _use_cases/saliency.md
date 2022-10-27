@@ -2,7 +2,7 @@
 title: Image Classification and Explanations with Saliency Maps
 ---
 
-{% include figure image_path="/assets/images/saliency.jpg" alt="First LIME redesign" caption="The image used in the visualization was taken
+{% include figure image_path="/assets/images/saliency.png" alt="Saliency designs" caption="The image used in the visualization was taken
 from the [ChestX-ray8 dataset](https://doi.org/10.48550/arXiv.1705.02315)." id="saliency" %}
 
 
