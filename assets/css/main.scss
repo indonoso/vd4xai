@@ -34,3 +34,17 @@ $global-font-family : $sans-serif;
 .project{
   font-family: $monospace;
 }
+
+figure {
+  display: inline-block;
+}
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+    text-align: center;
+}
+
+figcaption{
+  font-family: $sans-serif;
+}
