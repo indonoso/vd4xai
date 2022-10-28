@@ -1,10 +1,84 @@
 ---
 permalink: /framework/
 ---
-TODO: intro al modelo
+Munzner’s framework is built for information visualization, but we argue that XAI applications are complex enough to require additional definitions to create a compelling visualization. Therefore, through this extension of the nested model, we address the analysis and validation of visualizations to XAI applications.
 
 # Roles
-TODO: explain old roles + new roles
+## Adding User Roles
+
+Originally, the nested model considered two roles: **end-user** and **visualization designer**. We
+added two additional roles: **AI expert** and **Domain expert**. Notice
+that in some cases, the same person can take several roles, as in the
+case that the domain expert is also the end-user of an XAI application.
+For generalization, we will consider them as different subjects in our
+proposed framework.
+
+The objective of an XAI visualization is to help interpret a particular
+prediction made by the AI method to a given input case. Since AI and XAI
+methods can have several layers of complexity, it is necessary to
+include the role of AI experts in defining tasks, interacting with the
+AI/ML model, and subsequent validations. In particular, the AI expert
+knows to validate the correct use of the AI/ML model, extract the data
+from the XAI method and validate that the XAI method can be applied to
+the AI model. For instance, if the AI model is a decision tree, the AI
+expert knows that attention mechanism [@AttentionMechanism] is not a
+valid XAI method. Or, if the model is a transformer
+[@TransformerAttention] and we use an attention mechanism to explain the
+classification of a document, the AI expert knows from which layer we
+should extract the attention values.
+
+Moreover, the AI model will, in many cases, solve a task in a specific
+domain, such as biology, finance, and law. Previous work has shown that
+expert knowledge is important when deploying systems. For instance, Rojo
+et al [@ROJO2021106183] designed a visualization that allowed domain
+experts to select a model according to expert knowledge. This system
+increased trust and understandability of the model. The issue is that
+the knowledge related to these domains is not necessarily familiar to a
+visualization designer, AI expert, or end user. There is a need to
+include domain experts to make practical decisions based on alternative
+designs produced by the visualization designer and the AI expert. For
+example, explaining a medical x-ray classification to a patient involves
+medical knowledge, and the end-user, i.e., the patient, does not
+necessarily know about medicine. For this reason, a domain expert user
+such as a medical doctor can justify and validate design decisions that
+effectively communicate the information to the end user.
+
+The interaction between these new roles, the visualization designer and
+the end-user, is key to choose the most effective visual and
+interactive encoding. Thus, we propose the moment when the new roles
+have to interact in the different levels of the nested models:
+
+1.  **Domain situation**[DS]{.ds} Since, at
+    this level, the whole problem and data are presented, it is
+    necessary to involve the two new roles. This way, the AI expert can
+    understand the XAI problem to be addressed, and the domain expert
+    can provide more information about the application domain and its
+    data.
+
+2.  [Data/task abstractionDTA]{.dta} At
+    this stage, the visualization designer can make the choices on its
+    own.
+
+3.  **Visual Encoding / Interaction
+    Idiom**[VEII]{style="background-color: green"} In the third level,
+    the visualization designer makes decisions around the visualization
+    design. Therefore, we propose that both new roles participate in
+    validating the design decisions. The AI expert validates that the
+    data related to the XAI model or method is interpreted correctly.
+    For instance, if data corresponds to the probability given by the
+    AI/ML model to classify a document, the AI expert can validate that
+    the visual encoding allows us to understand that this value is a
+    probability. The domain expert can validate that the design focuses
+    on the relevant data of the problem and is understandable in the
+    specific domain. For example, suppose we are explaining the
+    classification of x-ray images and want to focus on an organ. In
+    that case, the domain expert can guide the most effective way to
+    highlight an organ on the x-ray and ensure that the end user can
+    understand it.
+
+4.  **Algorithm**[A]{style="background-color: pink"} Finally, the last
+    level is to build the visualization, and therefore, it is not
+    necessary to involve the new roles to make this task.
 
 # Applying and extending the Nested Model for Visual XAI
 
